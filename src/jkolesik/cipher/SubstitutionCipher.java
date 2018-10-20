@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 public class SubstitutionCipher extends MonoAlphabeticCipher{
 	/**
 	 * Konstruktor der Klasse SubstitutionCipher.
-	 * @param secretAlphabet übernimmt das zum Verschlüsseln benütigte SecretAlphabet
+	 * @param secretAlphabet übernimmt das zum Verschlüsseln benötigte SecretAlphabet.
 	 */
 	
 	public SubstitutionCipher(String secretAlphabet) {

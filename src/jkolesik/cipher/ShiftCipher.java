@@ -2,28 +2,28 @@ package jkolesik.cipher;
 
 public class ShiftCipher extends MonoAlphabeticCipher{
 	/**
-	 * Konstruktor f�r die Klasse ShiftCipher	
-	 * @param i �bernimmt, um wie viele Stellen die Buchstaben verschoben werden sollen
+	 * Konstruktor für die Klasse ShiftCipher	
+	 * @param i übernimmt, um wie viele Stellen die Buchstaben verschoben werden sollen
 	 */
 	public ShiftCipher(int i) {
-		cycle(i);
+		shift(i);
 	}
 	/**
-	 * die SetterMethode f�r den Shift
-	 * @param i �bernimmt, um wie viele Stellen die Buchstaben verschoben werden sollen
+	 * die SetterMethode für den Shift
+	 * @param i übernimmt, um wie viele Stellen die Buchstaben verschoben werden sollen
 	 */
-	public void setShiftValue(int i) {
+	public void setextFieldShiftValueValue(int i) {
 		if(i != 0) {
-			cycle(i);
+			shift(i);
 		}
 	}
 	/**
 	 * Diese Methode shiftet das Alphabet um soviele Stellen, wie es vom Benutzer eingegeben wurde
-	 * @param i �bernimmt, um wie viele Stellen die Buchstaben verschoben werden sollen
+	 * @param i übernimmt, um wie viele Stellen die Buchstaben verschoben werden sollen
 	 */
-	private void cycle(int i){
+	private void shift(int i){
 		char[] alph = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t',
-					   'u','v','w','x','y','z','�','�','�','�'};
+					   'u','v','w','x','y','z'};
 		char[] newAlph = new char[alph.length];
 		for(int j = 0; j < i; j++) {
 			newAlph[0] = alph[alph.length-1];

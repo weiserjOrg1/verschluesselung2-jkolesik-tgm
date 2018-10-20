@@ -13,7 +13,7 @@ public class MonoAlphabeticCipher implements Cipher{
 	 * Konstruktor der Klasse MonoAlphabeticCipher 
 	 */
 	public MonoAlphabeticCipher(){
-		this.secretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß"; //Setzt zu Beginn das Referenzalphabet
+		this.secretAlphabet = "abcdefghijklmnopqrstuvwxyz"; //Setzt zu Beginn das Referenzalphabet
 	}
 	/**
 	 * Getter-Methode des SectetAlphabet-Attributes
@@ -54,13 +54,13 @@ public class MonoAlphabeticCipher implements Cipher{
 	}
 	
 	/**
-	 * hier wird �berpr�ft, ob das zu setzende secretAlphabet alle (und nur) Buchstaben des "normalen"
+	 * hier wird überprüft, ob das zu setzende secretAlphabet alle (und nur) Buchstaben des "normalen"
 	 * Alphabets enthalten
-	 * @param secretAlphabet �bernimmt das zu setzende secretAlpahet
-	 * @return gibt false zur�ck, wenn das secretAlphabet nicht den Regeln entspricht, true wenn schon.
+	 * @param secretAlphabet übernimmt das zu setzende secretAlpahet
+	 * @return gibt false zurück, wenn das secretAlphabet nicht den Regeln entspricht, true wenn schon.
 	 */
 	private boolean containsAlphabet(String secretAlphabet) {
-		String alph = "abcdefghijklmnopqrstuvwxyzäöüß";
+		String alph = "abcdefghijklmnopqrstuvwxyz";
 		for(int i = 0; i < secretAlphabet.length(); i++) {
 			if(secretAlphabet.indexOf(alph.charAt(i)) == -1){
 				return false;
@@ -79,7 +79,7 @@ public class MonoAlphabeticCipher implements Cipher{
 		String newText = "";
 		if(text != null && text != "") {
 			text = text.toLowerCase();
-			String referenceAlphabet = "abcdefghijklmnopqrstuvwxyzäöß"; //Standard-Alphabet
+			String referenceAlphabet = "abcdefghijklmnopqrstuvwxyz"; //Standard-Alphabet
 			for(int i = 0; i < text.length(); i++) {
 				try {
 					newText += this.secretAlphabet.charAt(referenceAlphabet.indexOf(text.charAt(i)));
@@ -104,7 +104,7 @@ public class MonoAlphabeticCipher implements Cipher{
 		String newText = "";
 		if(text != null && text != "") {
 			text = text.toLowerCase();
-			String referenceAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
+			String referenceAlphabet = "abcdefghijklmnopqrstuvwxyz";
 			for(int i = 0; i < text.length(); i++) {
 				try {
 					newText += referenceAlphabet.charAt(this.secretAlphabet.indexOf(text.charAt(i)));
